@@ -51,6 +51,14 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script>
+    if (window.indexedDB) {
+      const request = indexedDB.open("budget", 1);
+      
+      request.onsuccess = event => {
+        console.log(request.result)
+    }
+  </script>
   <script src="index.js"></script>
   <script>
     if ("serviceWorker" in navigator) {
